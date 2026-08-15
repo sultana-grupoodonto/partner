@@ -4,124 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socio Operacional MSO | Sultana Grupo Odontológico</title>
-    <script src="https://tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        sultanaGold: '#d4af37',
-                        sultanaDark: '#0b132b',
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Production CSS Framework Isolation Layer -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        body { background-color: #030712; color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        .sultana-gold { color: #d4af37; }
+        .bg-sultanaGold { background-color: #d4af37; }
+        .border-sultanaGold { border-color: #d4af37; }
+        .sultana-dark-box { background-color: #0f172a; border: 1px solid #1e293b; }
+        .sultana-btn { background-color: #d4af37; color: #030712; font-weight: 800; text-decoration: none; border-radius: 8px; display: inline-block; padding: 14px 28px; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.2s ease; text-align: center; }
+        .sultana-btn:hover { background-color: #f59e0b; transform: translateY(-1px); }
+        .aspen-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
+        @media (max-width: 640px) { .aspen-grid { grid-template-cols: 1fr; } }
+        .aspen-card { background-color: #0b132b; border: 1px solid #1e293b; padding: 24px; border-radius: 12px; cursor: pointer; text-align: center; transition: all 0.2s ease; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .aspen-card:hover { border-color: #d4af37; background-color: #1e293b; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        input[type="text"], input[type="tel"] { width: 100%; height: 48px; background-color: #030712; border: 1px solid #1e293b; border-radius: 8px; color: #ffffff; padding: 0 16px; box-sizing: border-box; }
+        input:focus { border-color: #d4af37; outline: none; }
+    </style>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased">
+<body class="w-100 min-vh-100 border-box">
 
-    <!-- Header / Navegación -->
-    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <span class="text-xl font-black tracking-wider text-white">SULTANA<span class="text-amber-500"> GRUPO ODONTOLÓGICO</span></span>
-            </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-400">
-                <a href="#beneficios" class="hover:text-amber-400 transition">Beneficios MSO</a>
-                <a href="#auditoria" class="hover:text-amber-400 transition">Auditoría Gratis</a>
+    <!-- Header Navigation Container -->
+    <header class="w-100 sticky top-0 z-50 border-b border-gray-900 backdrop-blur-md" style="background-color: rgba(3, 7, 18, 0.95);">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between flex-row" style="max-width: 1152px; display: flex; justify-content: space-between; align-items: center;">
+            <div class="text-xl font-black tracking-wider text-white">SULTANA <span class="sultana-gold" style="color: #d4af37;">GRUPO ODONTOLÓGICO</span></div>
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-gray-400" style="display: flex; gap: 24px;">
+                <a href="#beneficios" class="no-underline text-gray-400 hover:text-white transition text-xs uppercase tracking-wider" style="color: #94a3b8;">Beneficios MSO</a>
+                <a href="#auditoria" class="no-underline text-gray-400 hover:text-white transition text-xs uppercase tracking-wider" style="color: #94a3b8;">Auditoría</a>
             </nav>
             <div>
-                <a href="#auditoria" class="inline-flex items-center justify-center px-4 h-10 text-sm font-bold text-slate-950 bg-amber-400 rounded-lg shadow-sm hover:bg-amber-300 transition">
-                    Afiliarse
-                </a>
+                <a href="#auditoria" class="sultana-btn text-xs px-4 py-2 rounded-md" style="background-color: #d4af37; color: #030712; padding: 8px 16px; border-radius: 6px; font-weight: bold; text-decoration: none;">Afiliarse</a>
             </div>
         </div>
     </header>
 
-    <!-- Sección Principal (Hero) -->
-    <section class="relative py-24 overflow-hidden border-b border-slate-800">
-        <div class="max-w-5xl mx-auto px-4 text-center space-y-6 relative z-10">
-            <span class="inline-block px-3 py-1 bg-amber-500/10 text-amber-400 text-xs font-bold rounded-full border border-amber-500/20 uppercase tracking-widest">
-                Red de Egresados UCE • San Pedro de Macorís
-            </span>
-            <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white max-w-3xl mx-auto leading-tight">
-                Reduzca sus Costos de Laboratorio en un 60% sin Inversión de Capital.
-            </h1>
-            <p class="text-lg text-slate-400 max-w-2xl mx-auto">
-                Optimice sus sillones clínicos vacíos con pacientes internacionales de alta facturación (USD) e integre un flujo digital CAD/CAM automatizado en su práctica actual [INDEX].
-            </p>
-            <div class="pt-4 flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-4">
-                <a href="#auditoria" class="w-full sm:w-auto inline-flex items-center justify-center px-6 h-12 font-bold text-slate-950 bg-amber-400 rounded-lg shadow-lg hover:bg-amber-300 transition">
-                    Solicitar Auditoría de Costos Gratis
-                </a>
-                <a href="https://wa.me" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center px-6 h-12 font-bold text-white bg-emerald-600 rounded-lg shadow-lg hover:bg-emerald-700 transition">
-                    Contactar por WhatsApp
-                </a>
+    <!-- Hero Section (B2B Dominican Focus) -->
+    <section class="relative py-24 bg-cover bg-center border-b border-gray-900" style="background-image: linear-gradient(rgba(3, 7, 18, 0.65), rgba(3, 7, 18, 0.90)), url('https://unsplash.com'); background-size: cover; background-position: center; padding: 100px 0;">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10" style="max-width: 1152px; display: flex; flex-wrap: wrap; gap: 40px;">
+            <div class="space-y-6" style="flex: 1; min-width: 300px;">
+                <span class="inline-block px-3 py-1 text-xs font-bold tracking-widest uppercase bg-yellow-400 bg-opacity-10 text-yellow-500 rounded-full border border-yellow-400 border-opacity-20" style="color: #fbbf24; background-color: rgba(251, 191, 36, 0.1); padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: bold; border: 1px solid rgba(251, 191, 36, 0.2);">
+                    Red de Egresados UCE • San Pedro de Macorís Hub
+                </span>
+                <h1 class="text-4xl md:text-5xl font-black tracking-tight leading-tight text-white" style="font-size: 42px; font-weight: 900; color: #ffffff; line-height: 1.2; margin: 16px 0;">
+                    Reduzca sus costos de laboratorio en un 60% sin inversión.
+                </h1>
+                <p class="text-lg text-gray-400 max-w-xl leading-relaxed" style="color: #cbd5e1; font-size: 18px; line-height: 1.6; margin-bottom: 24px;">
+                    Optimice sus sillones clínicos vacíos con pacientes internacionales de alta facturación (USD) e integre un flujo digital CAD/CAM automatizado en su práctica actual de manera inmediata.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
+                    <a href="#auditoria" class="sultana-btn" style="background-color: #d4af37; color: #030712; padding: 14px 28px; border-radius: 8px; font-weight: bold; text-decoration: none; text-transform: uppercase;">Solicitar Auditoría de Sillón Gratis</a>
+                </div>
             </div>
-        </div>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-500/5 via-transparent to-transparent pointer-events-none"></div>
-    </section>
-
-    <!-- Pilares del Modelo MSO -->
-    <section id="beneficios" class="max-w-6xl mx-auto px-4 py-20">
-        <div class="text-center space-y-4 mb-16">
-            <h2 class="text-3xl font-black tracking-tight text-white">Incentivos Exclusivos para Doctores Aliados</h2>
-            <p class="text-slate-400 max-w-2xl mx-auto">Resolvemos los cuellos de botella operativos de su clínica utilizando estrictamente infraestructura inteligente [INDEX].</p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 space-y-3">
-                <div class="text-2xl text-amber-400">📊</div>
-                <h3 class="text-xl font-bold text-white">Arbitraje de Laboratorio Digital</h3>
-                <p class="text-sm text-slate-400 leading-relaxed">Elimine los márgenes minoristas de los laboratorios externos. Al escanear con nuestro sistema en la nube, reduce drásticamente el costo de coronas, puentes y prótesis de inmediato [INDEX].</p>
-            </div>
-            <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 space-y-3">
-                <div class="text-2xl text-amber-400">✈️</div>
-                <h3 class="text-xl font-bold text-white">Tráfico de Turismo Dental (USD)</h3>
-                <p class="text-sm text-slate-400 leading-relaxed">Nuestra plataforma de conserjería internacional captura pacientes de EE.UU. y Canadá y los asigna directamente a sus consultorios subutilizados [INDEX].</p>
-            </div>
-            <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 space-y-3">
-                <div class="text-2xl text-amber-400">🛡️</div>
-                <h3 class="text-xl font-bold text-white">Absolución Administrativa Total</h3>
-                <p class="text-sm text-slate-400 leading-relaxed">El MSO absorbe la carga de facturación, contabilidad, cumplimiento legal y logística para que usted regrese al 100% de su eficiencia al lado del sillón [INDEX].</p>
-            </div>
-            <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 space-y-3">
-                <div class="text-2xl text-amber-400">🔄</div>
-                <h3 class="text-xl font-bold text-white">Red Móvil de Especialistas</h3>
-                <p class="text-sm text-slate-400 leading-relaxed">No pierda ingresos refiriendo casos complejos. Nuestro equipo móvil de cirujanos, periodoncistas y ortodoncistas rota por sus instalaciones bajo esquemas de ganancias compartidas [INDEX].</p>
+            <div class="space-y-4" style="flex: 1; min-width: 300px;">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2" style="color: #94a3b8; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;">Áreas de Crecimiento Clínico:</h3>
+                <div class="aspen-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+                    <a href="#auditoria" class="no-underline border border-gray-800 p-4 rounded-xl flex items-center justify-between text-white hover:border-sultanaGold transition" style="background-color: rgba(15, 23, 42, 0.6); border: 1px solid #1e293b; padding: 16px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; color: white; text-decoration: none;">
+                        <span class="text-sm font-bold">Tráfico Dental USD</span>
+                        <span class="sultana-gold" style="color: #d4af37;">&rarr;</span>
+                    </a>
+                    <a href="#auditoria" class="no-underline border border-gray-800 p-4 rounded-xl flex items-center justify-between text-white hover:border-sultanaGold transition" style="background-color: rgba(15, 23, 42, 0.6); border: 1px solid #1e293b; padding: 16px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; color: white; text-decoration: none;">
+                        <span class="text-sm font-bold">Laboratorio CAD/CAM</span>
+                        <span class="sultana-gold" style="color: #d4af37;">&rarr;</span>
+                    </a>
+                    <a href="#auditoria" class="no-underline border border-gray-800 p-4 rounded-xl flex items-center justify-between text-white hover:border-sultanaGold transition" style="background-color: rgba(15, 23, 42, 0.6); border: 1px solid #1e293b; padding: 16px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; color: white; text-decoration: none;">
+                        <span class="text-sm font-bold">Especialistas Móviles</span>
+                        <span class="sultana-gold" style="color: #d4af37;">&rarr;</span>
+                    </a>
+                    <a href="#auditoria" class="no-underline border border-gray-800 p-4 rounded-xl flex items-center justify-between text-white hover:border-sultanaGold transition" style="background-color: rgba(15, 23, 42, 0.6); border: 1px solid #1e293b; padding: 16px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; color: white; text-decoration: none;">
+                        <span class="text-sm font-bold">Gestión de Seguros</span>
+                        <span class="sultana-gold" style="color: #d4af37;">&rarr;</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Formulario de Admisión B2B -->
-    <section id="auditoria" class="max-w-md mx-auto px-4 py-12 pb-24">
-        <div class="bg-slate-800 border border-slate-700 p-8 rounded-2xl shadow-2xl space-y-6">
-            <div class="space-y-2 text-center">
-                <h2 class="text-2xl font-bold text-white">Califique su Consultorio</h2>
-                <p class="text-xs text-slate-400">Los datos ingresados son estrictamente confidenciales y evaluados por nuestro panel clínico [INDEX].</p>
+    <!-- Pilares de Incentivos para Doctores Aliados -->
+    <section id="beneficios" class="py-20 max-w-6xl mx-auto px-4" style="max-width: 1152px; padding: 60px 16px; margin: 0 auto;">
+        <div class="mb-8 text-center mb-12">
+            <span class="text-xs font-bold uppercase tracking-wider sultana-gold">Ventajas MSO</span>
+            <h2 class="text-3xl font-black text-white mt-1">INCENTIVOS EXCLUSIVOS PARA DOCTORES</h2>
+        </div>
+        
+        <div class="grid-container">
+            <div class="sultana-dark-box p-6 rounded-xl" style="padding: 24px; border-radius: 12px; background-color: #0f172a; border: 1px solid #1e293b;">
+                <div class="text-3xl mb-3">📊</div>
+                <h3 class="text-lg font-bold text-white mb-2">Arbitraje de Costos</h3>
+                <p class="text-sm text-gray-400 leading-relaxed" style="color: #94a3b8;">Elimine los márgenes minoristas. Al escanear en nuestra nube MSO, reduce drásticamente los costos de prótesis y coronas.</p>
             </div>
-            <form class="space-y-4">
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Nombre Completo del Especialista</label>
-                    <input type="text" required class="w-full px-4 h-11 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-amber-400 transition" placeholder="Dr. Juan Pérez">
+            <div class="sultana-dark-box p-6 rounded-xl" style="padding: 24px; border-radius: 12px; background-color: #0f172a; border: 1px solid #1e293b;">
+                <div class="text-3xl mb-3">✈️</div>
+                <h3 class="text-lg font-bold text-white mb-2">Tráfico Conserjería</h3>
+                <p class="text-sm text-gray-400 leading-relaxed" style="color: #94a3b8;">Nuestra red global captura pacientes en EE.UU. y los asigna directamente a sus consultorios subutilizados.</p>
+            </div>
+            <div class="sultana-dark-box p-6 rounded-xl" style="padding: 24px; border-radius: 12px; background-color: #0f172a; border: 1px solid #1e293b;">
+                <div class="text-3xl mb-3">🔄</div>
+                <h3 class="text-lg font-bold text-white mb-2">Especialistas Móviles</h3>
+                <p class="text-sm text-gray-400 leading-relaxed" style="color: #94a3b8;">No pierda ingresos. Nuestro equipo de cirujanos y ortodoncistas rota por sus clínicas bajo esquemas compartidos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Admisión Clínico B2B -->
+    <section id="auditoria" class="py-20 px-4" style="padding: 60px 16px;">
+        <div class="bg-gray-900 border border-gray-800 max-w-xl center rounded-xl p-8 shadow-2xl" style="max-width: 576px; margin: 0 auto; border: 1px solid #1e293b; border-radius: 12px;">
+            <div class="text-center mb-6" style="text-align: center; margin-bottom: 24px;">
+                <h2 class="text-2xl font-black text-white">Auditoría Confidencial MSO</h2>
+                <p class="text-xs text-gray-400" style="color: #94a3b8; font-size: 12px;">Ingrese los parámetros de su práctica para evaluar su elegibilidad a la red.</p>
+            </div>
+
+            <form action="https://google.com" method="POST" class="space-y-4">
+                <div style="display: flex; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 200px;">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2" style="color: #94a3b8; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 8px;">Nombre del Especialista</label>
+                        <input type="text" name="entry.444444444" required placeholder="Dr. Juan Pérez">
+                    </div>
+                    <div style="flex: 1; min-width: 200px;">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2" style="color: #94a3b8; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 8px;">WhatsApp Directo</label>
+                        <input type="tel" name="entry.666666666" required placeholder="809-555-5555">
+                    </div>
                 </div>
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Ubicación de la Clínica (Zona/Ciudad)</label>
-                    <input type="text" required class="w-full px-4 h-11 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-amber-400 transition" placeholder="San Pedro de Macorís">
+
+                <div style="margin-bottom: 16px;">
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2" style="color: #94a3b8; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 8px;">Ubicación de la Clínica</label>
+                    <input type="text" name="entry.555555555" required placeholder="San Pedro de Macorís, RD">
                 </div>
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Número de WhatsApp Directo</label>
-                    <input type="tel" required class="w-full px-4 h-11 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-amber-400 transition" placeholder="809-555-5555">
+
+                <div style="margin-top: 16px;">
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2" style="color: #94a3b8; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 12px;">Área Crítica a Optimizar de Inmediato:</label>
+                    <div class="aspen-grid">
+                        <div class="aspen-card">
+                            <input type="radio" name="entry.777777777" value="Reducción de Laboratorio" searchable required style="margin-bottom: 8px;">
+                            <div class="text-2xl mb-2" style="font-size: 24px;">📊</div>
+                            <span class="text-xs font-bold text-white block" style="font-size: 12px; font-weight: bold; color: white;">Costos Lab</span>
+                        </div>
+                        <div class="aspen-card">
+                            <input type="radio" name="entry.777777777" value="Turismo Dental" style="margin-bottom: 8px;">
+                            <div class="text-2xl mb-2" style="font-size: 24px;">✈️</div>
+                            <span class="text-xs font-bold text-white block" style="font-size: 12px; font-weight: bold; color: white;">Pacientes USD</span>
+                        </div>
+                        <div class="aspen-card">
+                            <input type="radio" name="entry.777777777" value="Especialistas Móviles" style="margin-bottom: 8px;">
+                            <div class="text-2xl mb-2" style="font-size: 24px;">🔄</div>
+                            <span class="text-xs font-bold text-white block" style="font-size: 12px; font-weight: bold; color: white;">Especialistas</span>
+                        </div>
+                        <div class="aspen-card">
+                            <input type="radio" name="entry.777777777" value="Administración MSO" style="margin-bottom: 8px;">
+                            <div class="text-2xl mb-2" style="font-size: 24px;">🛡️</div>
+                            <span class="text-xs font-bold text-white block" style="font-size: 12px; font-weight: bold; color: white;">Gestión Operativa</span>
+                        </div>
+                    </div>
                 </div>
-                <button type="submit" class="w-full h-12 text-sm font-black text-slate-950 bg-amber-400 rounded-lg shadow-md hover:bg-amber-300 transition mt-2 pt-0.5">
-                    Enviar Solicitud de Diagnóstico de Costos
+
+                <button type="submit" class="sultana-btn w-100 mt-4" style="width: 100%; border: none; font-weight: 900; margin-top: 24px; padding: 14px 0; background-color: #d4af37; color: #030712; text-transform: uppercase; border-radius: 8px; cursor: pointer;">
+                    Enviar Solicitud de Afiliación MSO
                 </button>
             </form>
         </div>
     </section>
 
-    <footer class="bg-slate-950 text-slate-600 text-center py-8 text-xs border-t border-slate-800">
-        <p>&copy; 2026 Sultana Grupo Odontológico. Todos los derechos reservados. Operaciones bajo el marco de Persona Física [INDEX].</p>
-    </footer>
-
-</body>
-</html>
+    <!-- Legally Protected Disclaimer B2B Wrapper Container -->
