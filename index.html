@@ -115,16 +115,36 @@
             </div>
 
             <form action="https://google.com" method="POST" class="space-y-4">
+                <!-- Invisible Source Token: Flags that data originated from the B2B Doctor Channel -->
+                <input type="hidden" name="entry.1831939187" value="B2B Dentist Recruitment">
+                
                 <div style="display: flex; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;">
                     <div style="flex: 1; min-width: 200px;">
-                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2" style="color: #94a3b8; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 8px;">Nombre del Especialista</label>
-                        <input type="text" name="entry.444444444" required placeholder="Dr. Juan Pérez">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Nombre del Especialista / Clínica</label>
+                        <input type="text" name="entry.1098773895" required placeholder="Dr. Juan Pérez">
                     </div>
                     <div style="flex: 1; min-width: 200px;">
-                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2" style="color: #94a3b8; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 8px;">WhatsApp Directo</label>
-                        <input type="tel" name="entry.666666666" required placeholder="809-555-5555">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">WhatsApp Directo</label>
+                        <input type="tel" name="entry.383522987" required placeholder="809-555-5555">
                     </div>
                 </div>
+
+                <div style="margin-top: 16px;">
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Área Crítica a Optimizar de Inmediato:</label>
+                    <div class="aspen-grid">
+                        <div class="aspen-card">
+                            <input type="radio" name="entry.935924697" value="MSO Partner Recruitment (Dentists)" required style="margin-bottom: 8px;">
+                            <div class="text-2xl mb-2">💼</div>
+                            <span class="text-xs font-bold text-white block">Unirse a la Red MSO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="sultana-btn w-100 mt-4" style="width: 100%; border: none; font-weight: 900; margin-top: 24px; padding: 14px 0; background-color: #d4af37; color: #030712; text-transform: uppercase; border-radius: 8px; cursor: pointer;">
+                    Enviar Solicitud de Afiliación MSO
+                </button>
+            </form>
+
 
                 <div style="margin-bottom: 16px;">
                     <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2" style="color: #94a3b8; font-size: 12px; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 8px;">Ubicación de la Clínica</label>
